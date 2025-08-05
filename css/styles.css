@@ -365,12 +365,18 @@ img {
 .testimonial-card {
   border: 1px solid var(--color-border);
   border-radius: 6px;
-  padding: 1.5rem;
+  padding: 51px 36px 32px;
   background-color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   transition: box-shadow 0.2s ease;
+
+  p{
+    font-size: 14px;
+    margin: 0;
+    line-height: 180%;
+  }
 }
 
 .testimonial-card:hover {
@@ -386,8 +392,7 @@ img {
 }
 
 .avatar {
-  width: var(--avatar-size);
-  height: var(--avatar-size);
+  width: 67px;
   border-radius: 50%;
   object-fit: cover;
   margin-right: 1rem;
