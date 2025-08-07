@@ -25,7 +25,8 @@ img {
     --color-text: #333;
     --color-muted: #787878;
     --color-border: #E4E4E4;
-
+    --color-hover: #71A7E2;
+    --color-active: #0E3B6C;
     --font-base: 'Open Sans', sans-serif;
 
     --spacing-xs: 0.5rem;
@@ -69,11 +70,12 @@ img {
 
   .button {
     display: inline-block;
-    padding: 0.5rem 1rem;
+    padding: 0.8rem 2rem;
     border-radius: 4px;
-    font-weight: bold;
+    font-weight: 500;
     text-align: center;
     cursor: pointer;
+    font-size: 15px;
     transition: background-color 0.3s ease;
   }
 
@@ -83,9 +85,17 @@ img {
     border: none;
   }
 
-  .button-primary:hover,
-  .button-primary:focus {
-    background-color: #1c50c8;
+  .button-primary:hover {
+    background-color: var(--color-hover);
+  }
+
+  .button-primary:focus-visible {
+    outline: 1px solid var(--color-hover);
+    outline-offset: 2px;
+  }
+
+  .button-primary:active {
+    background-color: var(--color-active);
   }
 
   .button-secondary {
@@ -135,9 +145,19 @@ img {
     font-size: 11px;
   }
 
+  .hero-button{
+    padding: 1rem 4.2rem;
+  }
   .ssl-text{
     display: flex;
-    gap: var(--spacing-xs);;
+    gap: 13px;
+    width: 250px;
+    justify-content: center;
+    align-items: center;
+    img{
+      height: 17px;
+      width: 14px;
+    }
   }
 
   .hero-section {
@@ -170,7 +190,8 @@ img {
     font-weight: 400;
     font-size: 16px;
     line-height: 155%;
-    color: var(--color-muted)
+    color: var(--color-muted);
+    margin-bottom: 34px;
   }
 
   .hero-image {
@@ -320,10 +341,16 @@ img {
     text-align: center;
   }
 
+  .services-heading{
+    margin-bottom: 21px;
+  }
+
   .services-description{
     font-weight: 400;
     font-size: 16px;
-    color: var(--color-muted) ;
+    color: var(--color-muted);
+    margin-top: 0;
+    margin-bottom: 54px;
   }
 
   .services-heading, 
@@ -496,3 +523,36 @@ option::checkmark {
   content: "";
 }
 
+.mobile-nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.burger-button{
+  background: none;
+  border: none;
+}
+
+@media (max-width: 860px) {
+  .nav-list{
+    display: none;
+  }
+
+  .hero-text{
+    >*{
+      max-width: 100%;
+    }
+  }
+
+  .hero-section{
+    background: none;
+  }
+}
+
+@media (min-width: 860px) {
+  .mobile-nav{
+    display: none;
+  }
+}
