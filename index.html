@@ -205,8 +205,9 @@
     <section id="join" class="join-section" aria-labelledby="join-heading">
       <h2 id="join-heading" class="join-heading">Join us</h2>
       <p class="join-description">Take control of your paid subscriptions today!</p>
-      <form class="join-form" action="#" method="POST">
-        <label for="name" class="visually-hidden">Name</label>
+      <form action="#" method="POST">
+        <div class="join-form">
+            <label for="name" class="visually-hidden">Name</label>
         <input type="text" id="name" name="name" placeholder="Name" required class="name" />
 
         <label for="email" class="visually-hidden">Email</label>
@@ -227,11 +228,14 @@
         </select>
         <label for="comment" class="visually-hidden">Comment</label>
         <textarea id="comment" name="comment" placeholder="Comment" rows="4" class="comment"></textarea>
+        </div>
+        <div class="submit-provider">
         <button type="submit" class="button button-primary submit" >Get Started</button>
         <p class="terms-agree checkbox">
             <input type="checkbox" id="agree" name="agree" required />
-            <label for="agree">I agree with <a href="#">user agreement</a></label>
+            <label for="agree">I agree with <a href="#" class="user-agreement">user agreement</a></label>
           </p>
+          </div>
       </form>
     </section>
     <hr class="divider"/>

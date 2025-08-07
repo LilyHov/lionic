@@ -128,8 +128,18 @@ img {
     align-items: center;
     margin: 0;
     padding: 0;
+    font-size: 15px;
   }
-
+  .nav-list>li:hover{
+    color: var(--color-hover);
+  }
+  .nav-list a:focus-visible{
+    outline: 1px solid var(--color-hover);
+  }
+  .nav-list a:active{
+    color: var(--color-primary);
+    border-bottom: 3px solid var(--color-primary);
+  }
   .main-nav{
     justify-content: space-between;
   }
@@ -448,10 +458,16 @@ img {
     grid-template-columns: 1fr 1fr 2fr;
     grid-template-areas:
       "name   email   comment"
-      "phone  country comment"
-      "null null submit"
-      "null null checkbox";
-    margin: 0 auto;
+      "phone  country comment";
+    margin: 0 auto 20px;
+    input{
+      height: 60px;
+    }
+    input,select,textarea{
+      padding: 15px 28px;
+      font-family: inherit;
+      color: var(--color-muted);
+    }
   }
   
   .name {
@@ -467,6 +483,7 @@ img {
   }
   
   .country {
+    align-items: center;
     grid-area: country;
   }
   
@@ -476,17 +493,31 @@ img {
   }
   
   .checkbox {
-    grid-area: checkbox;
     display: flex;
     align-items: center;
     gap: 0.5rem;
     font-size: 0.9rem;
+    color: var(--color-muted);
+    input{
+      width: 14px;
+    }
+    a{
+      text-decoration: underline;
+      color: var(--color-primary);
+    }
   }
   
   .submit {
-    grid-area: submit;
+    border-radius: 50px;
+    padding: 1.3rem 4rem;
+    text-transform: uppercase;
   }
 
+  .submit-provider{
+    display: flex;
+    flex-direction: column;
+    align-items: self-end;
+  }
 select,
   ::picker(select) {
   appearance: base-select;
@@ -535,6 +566,8 @@ option::checkmark {
   border: none;
 }
 
+
+/* responsive design */
 @media (max-width: 860px) {
   .nav-list{
     display: none;
