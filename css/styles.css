@@ -112,7 +112,6 @@ img {
 
   .site-header {
     background-color: #fff;
-    padding: var(--spacing-sm) var(--spacing-md);
   }
 
   .tagline {
@@ -129,6 +128,17 @@ img {
     margin: 0;
     padding: 0;
     font-size: 15px;
+  }
+  .main-nav{
+    height: 94px;
+  }
+  .trial{
+    width: 150px;
+    text-transform: uppercase;
+  }
+  .nav-list{
+    font-weight: 600;
+    gap: 40px;
   }
   .nav-list>li:hover{
     color: var(--color-hover);
@@ -184,13 +194,13 @@ img {
 
   .hero-text {
     flex: 1 1 50%;
-    padding-left: var(--spacing-md);
     >*{
-      max-width: 50%;
+      max-width: 46%;
     }
   }
 
   .hero-heading{
+    margin-top: 0;
     font-size: 40px;
     line-height: 130%;
     font-weight: 300;
@@ -237,6 +247,13 @@ img {
     border-radius: 6px;
   }
 
+  .service-item:hover{
+    background-color: var(--color-primary);
+    color: white;
+    svg path{
+      fill: white;
+    }
+  }
   .articles-section .article-list {
     display: flex;
     flex-wrap: wrap;
@@ -386,6 +403,7 @@ img {
   }
 
   .divider{
+    margin: 0;
     border: none;
     height: 1px; /* thickness */
     background-color: var(--color-border);
